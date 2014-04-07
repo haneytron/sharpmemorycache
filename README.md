@@ -25,4 +25,4 @@ INSTALLATION INSTRUCTIONS
 ============================================
 
 
-Just include the DLL in your project and create a `new TrimmingMemoryCache(name, config)` instead of a `new MemoryCache(name, config)`. It will do the rest automatically!
+Just include the DLL in your project ([NuGet](http://www.nuget.org/packages/SharpMemoryCache)) and create a `new TrimmingMemoryCache(name, config)` instead of a `new MemoryCache(name, config)`. It will do the rest automatically!
