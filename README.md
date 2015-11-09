@@ -2,7 +2,7 @@ SharpMemoryCache 1.0.0
 ===========
 
 
-Operates identically to a regular .NET MemoryCache, except that it properly initaties trims at the configured polling interval based on your memory settings.
+Operates identically to a regular .NET MemoryCache, except that it properly initiates trims at the configured polling interval based on your memory settings.
 
 A spinoff of the Dache project.
 
