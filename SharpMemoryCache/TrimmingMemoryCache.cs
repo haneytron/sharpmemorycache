@@ -11,7 +11,8 @@ using System.Threading;
 namespace SharpMemoryCache
 {
     /// <summary>
-    /// Operates identically to a regular MemoryCache, except that it properly initaties trims at the configured polling interval based on your memory settings.
+    /// Operates identically to a regular MemoryCache, except that it properly initiates trims at the configured polling interval based on your memory settings.
+    /// Usage: MemoryCache cache = new TrimmingMemoryCache(...);
     /// </summary>
     public class TrimmingMemoryCache : MemoryCache
     {
@@ -75,7 +76,8 @@ namespace SharpMemoryCache
         private void SetMemoryCacheLastTrimGen2Count(object state)
         {
             // Set the value to force the trim to be executed instead of waiting for then next Gen 2 Garbage Collection
-            _setMemoryCacheLastTrimGen2CountFunc(_lastTrimGen2Count++ % 10);
+            _lastTrimGen2Count = _lastTrimGen2Count++ % 10;
+            _setMemoryCacheLastTrimGen2CountFunc(_lastTrimGen2Count);
 
             // Check if we need to configure the timer's interval
             if (!_isPollingIntervalSet)

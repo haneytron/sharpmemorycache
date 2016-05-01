@@ -1,4 +1,4 @@
-SharpMemoryCache 1.0.0
+SharpMemoryCache 1.0.1
 ===========
 
 
@@ -6,13 +6,18 @@ Operates identically to a regular .NET MemoryCache, except that it properly init
 
 A spinoff of the Dache project.
 
-**WEB:**   http://www.getdache.net
+**WEB:**   http://www.dache.io
 
-**EMAIL:** info@getdache.net
+**EMAIL:** info@dache.io
 
 
 VERSION HISTORY
 ============================================
+
+1.0.1
+------------------
+
+- Fixed integer overflow that would happen in very long running applications
 
 
 1.0.0
